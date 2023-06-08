@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="meusEstilos.css">
+    <title>Calculadora</title>
+</head>
+<body class="bg-light">
+   
+    <div class="container d-flex justify-content-center align-items-center mt-5"> 
+    <div class="card border-dark bg-dark" style="width: 28rem;">
+        <div class="card-body ">
+        <h6 class="text-center ">Calculadora</h6>  
+        <div class="form-floating " >
+            <textarea class="form-control" placeholder="" id="tela" style="height: 100px "></textarea>
+        </div> 
+    </p>
+        <div class="dropdown">
+            <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Tema</a></li>
+              <li><a class="dropdown-item" href="#">Conversor</a></li>
+              <li><a class="dropdown-item" href="#">...</a></li>
+            </ul>
+        </div>
+        </p>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  f(x)
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <table class="table">
+        <tbody>
+          <tr>
+            <th ><button type="button" class="btn btn-light btn-num" >INV</button></th>
+            <th ><button type="button" class="btn btn-light btn-num">8</button></th>
+            <th ><button type="button" class="btn btn-light btn-num">x!</button></th>
+            
+          </tr>
+          <tr>
+            <th ><button type="button" class="btn btn-light btn-num">sin</button></th>
+            <td><button type="button" class="btn btn-light btn-num">ln</button></td>
+            <td><button type="button" class="btn btn-light btn-num">raiz</button></td>
+            
+          </tr>
+          <tr>
+            <th ><button type="button" class="btn btn-light btn-num">cos</button></th>
+            <td><button type="button" class="btn btn-light btn-num">log</button></td>
+            <td><button type="button" class="btn btn-light btn-num">^</button></td>
+            
+          </tr>
+          <tr>
+            <th ><button type="button" class="btn btn-light btn-num">tan</button></th>
+            <td ><button type="button" class="btn btn-light btn-num">pi</button></td>
+            <td><button type="button" class="btn btn-light btn-num">e</button></td>
+            
+          </tr>
+        </tbody>
+      </table>
+               </div>
+            </div>
+      </div>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th ><button type="button" class="btn btn-light btn-num" >7</button></th>
+            <th ><button type="button" class="btn btn-light btn-num">8</button></th>
+            <th ><button type="button" class="btn btn-light btn-num">9</button></th>
+            <th ><button type="button" class="btn btn-danger btn-num">DEL</button></th>
+            <th ><button type="button" class="btn btn-danger btn-num">AC</button></th>
+          </tr>
+          <tr>
+            <th ><button type="button" class="btn btn-light btn-num">4</button></th>
+            <td><button type="button" class="btn btn-light btn-num">5</button></td>
+            <td><button type="button" class="btn btn-light btn-num">6</button></td>
+            <td><button type="button" class="btn btn-light btn-num">x</button></td>
+            <th><button type="button" class="btn btn-light btn-num">/</button></th>
+          </tr>
+          <tr>
+            <th ><button type="button" class="btn btn-light btn-num">1</button></th>
+            <td><button type="button" class="btn btn-light btn-num">2</button></td>
+            <td><button type="button" class="btn btn-light btn-num">3</button></td>
+            <td><button type="button" class="btn btn-light btn-num">+</button></td>
+            <th ><button type="button" class="btn btn-light btn-num">-</button></th>
+          </tr>
+          <tr>
+            <th ><button type="button" class="btn btn-light btn-num">0</button></th>
+            <td ><button type="button" class="btn btn-light btn-num">.</button></td>
+            <td><button type="button" class="btn btn-light btn-num">%</button></td>
+            <th ><button type="button" class="btn btn-light btn-num">ANS</button></th>
+            <th ><button type="button" class="btn btn-light btn-num ">=</button></th>
+          </tr>
+        </tbody>
+      </table>
+
+</div>
+</div>
+</div>
+
+
+
+
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
