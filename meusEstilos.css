@@ -1,4 +1,9 @@
 .btn-num {
     font-size: 20px; 
     width: 65px;
+    height: 40px;
   }
+
+.text-btn{
+    color: white;
+}
