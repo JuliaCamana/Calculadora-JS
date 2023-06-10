@@ -1,14 +1,25 @@
 const VET_NUMBERS = "0123456789";
 const VET_OPERATORS = "+-*/%";
+const VET_PARENTS = "()";
 
 $(document).ready(() => {
   const displayInput = $("#input-display");
+
   let answer = "";
 
-  //result
+  const factorialRecursive = (num) => {
+    if (num === 0 || num === 1) {
+      return 1;
+    }
+
+    return num * factorialRecursive(num - 1);
+  };
+
   const handleResult = () => {
     try {
       let expression = displayInput.val();
+
+      expression = expression.split("^").join("**");
 
       displayInput.val(eval(expression));
     } catch (error) {
@@ -20,13 +31,97 @@ $(document).ready(() => {
     return displayInput.val().charAt(displayInput.val().length - 1);
   };
 
-  $("#btn-open-parent").click(() => {
-    displayInput.val(displayInput.val());
+  $(".btn-sqrt").click(() => {
+    try {
+      displayInput.val(Math.sqrt(eval(displayInput.val())));
+    } catch {
+      alert("Expressão Inválida!");
+    }
   });
 
-  $("#btn-close-parent").click(() => {});
+  $(".btn-ln").click(() => {
+    try {
+      displayInput.val(Math.log(eval(displayInput.val())));
+    } catch {
+      alert("Expressão Inválida!");
+    }
+  });
 
-  //numbers
+  $(".btn-tan").click(() => {
+    try {
+      displayInput.val(Math.tan(eval(displayInput.val())));
+    } catch {
+      alert("Expressão Inválida!");
+    }
+  });
+
+  $(".btn-cos").click(() => {
+    try {
+      displayInput.val(Math.cos(eval(displayInput.val())));
+    } catch {
+      alert("Expressão Inválida!");
+    }
+  });
+
+  $(".btn-sin").click(() => {
+    try {
+      displayInput.val(Math.sin(eval(displayInput.val())));
+    } catch {
+      alert("Expressão Inválida!");
+    }
+  });
+
+  $(".btn-double").click(() => {
+    try {
+      const x = eval(displayInput.val());
+
+      displayInput.val(eval(x + "**2"));
+    } catch {
+      alert("Expressão Inválida!");
+    }
+  });
+
+  $(".btn-div-one").click(() => {
+    try {
+      const result = 1 / eval(displayInput.val());
+      displayInput.val(isNaN(result) ? "" : result);
+    } catch {
+      alert("Expressão Inválida!");
+    }
+  });
+
+  $(".btn-fat").click(() => {
+    try {
+      displayInput.val(factorialRecursive(eval(displayInput.val())));
+    } catch {
+      alert("Expressão Inválida!");
+    }
+  });
+
+  $(".btn-expo").click(() => {
+    if (VET_NUMBERS.includes(getInputLastChar())) {
+      displayInput.val(displayInput.val() + "^");
+    }
+  });
+
+  $(".btn-open-parent").click(() => {
+    displayInput.val(displayInput.val() + "(");
+  });
+
+  $(".btn-euler").click(() => {
+    displayInput.val(Math.E);
+  });
+
+  $(".btn-pi").click(() => {
+    displayInput.val(Math.PI);
+  });
+
+  $(".btn-close-parent").click(() => {
+    if (VET_NUMBERS.includes(getInputLastChar())) {
+      displayInput.val(displayInput.val() + ")");
+    }
+  });
+
   $("body").delegate(".btn-only-num", "click", (event) => {
     displayInput.val(displayInput.val() + event.target.value);
   });
@@ -64,33 +159,35 @@ $(document).ready(() => {
       displayInput.val(displayInput.val() + ".");
   });
 
-  //operators
   $("body").delegate(".btn-operators", "click", (event) => {
     const value = event.target.value;
 
     if (
       (!displayInput.val() && value == "-") ||
-      VET_NUMBERS.includes(getInputLastChar())
+      VET_NUMBERS.includes(getInputLastChar()) ||
+      getInputLastChar() == ")"
     ) {
       displayInput.val(displayInput.val() + value);
     }
   });
 
-  //igual
   $("body").delegate(".btn-igual", "click", (event) => {
     handleResult();
   });
 
-  //answer
   $("body").delegate(".btn-answer", "click", () => {
-    if (
-      VET_NUMBERS.includes(getInputLastChar()) &&
-      displayInput.val() == eval(displayInput.val())
-    ) {
-      answer = displayInput.val();
-    } else if (VET_OPERATORS.includes(getInputLastChar()) && answer) {
-      displayInput.val(displayInput.val() + answer);
-      answer = "";
+    try {
+      if (
+        VET_NUMBERS.includes(getInputLastChar()) &&
+        displayInput.val() == eval(displayInput.val())
+      ) {
+        answer = displayInput.val();
+      } else if (VET_OPERATORS.includes(getInputLastChar()) && answer) {
+        displayInput.val(displayInput.val() + answer);
+        answer = "";
+      }
+    } catch {
+      alert("Expressão Inválida!");
     }
   });
 });
