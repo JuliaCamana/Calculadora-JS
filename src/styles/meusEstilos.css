@@ -7,3 +7,7 @@
 .text-btn{
     color: white;
 }
+
+#input-display {
+  text-align: right;
+}

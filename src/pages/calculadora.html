@@ -12,7 +12,7 @@
         <div class="container d-flex justify-content-center align-items-center mt-5">
             <div class="card border-dark bg-dark" style="width: 28rem;">
                 <div class="card-body ">
-                    <h4 class="text-center text-light ">Calculadora</h4>
+                    <h4 class="text-center text-light">Calculadora</h4>
                     <div class="form-floating " >
                         <textarea readonly class="form-control" placeholder="" id="input-display" style="height: 100px "></textarea>
                     </div>
@@ -51,15 +51,15 @@
                                         </tr>
                                         <tr>
                                             <th ><button type="button" class="btn btn-light btn-num">cos</button></th>
-                                            <td><button type="button" class="btn btn-light btn-num"  value="log">log</button></td>
-                                            <td><button type="button" class="btn btn-light btn-num"  value="^">^</button></td>
-                                            <td><button type="button" class="btn btn-light btn-num"  value="(">(</button></td>
+                                            <td><button type="button" class="btn btn-light btn-num" value="log">log</button></td>
+                                            <td><button type="button" class="btn btn-light btn-num" value="^">^</button></td>
+                                            <td><button type="button" class="btn btn-light btn-num btn-open-parent" value="(">(</button></td>
                                         </tr>
                                         <tr>
                                             <th ><button type="button" class="btn btn-light btn-num"  value="tan">tan</button></th>
                                             <td ><button type="button" class="btn btn-light btn-num"  value="pi">pi</button></td>
                                             <td><button type="button" class="btn btn-light btn-num" value="e">e</button></td>
-                                            <td><button type="button" class="btn btn-light btn-num"  value=")">)</button></td>
+                                            <td><button type="button" class="btn btn-light btn-num btn-close-parent"  value=")">)</button></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -72,29 +72,29 @@
                                 <th><button type="button" class="btn btn-light btn-num btn-only-num"  value="7">7</button></th>
                                 <th><button type="button" class="btn btn-light btn-num btn-only-num"  value="8">8</button></th>
                                 <th><button type="button" class="btn btn-light btn-num btn-only-num"  value="9">9</button></th>
-                                <th><button type="button" class="btn btn-danger btn-num" >DEL</button></th>
-                                <th><button type="button" class="btn btn-danger btn-num">AC</button></th>
+                                <th><button type="button" class="btn btn-danger btn-num btn-del" >DEL</button></th>
+                                <th><button type="button" class="btn btn-danger btn-num btn-ac">AC</button></th>
                             </tr>
                             <tr>
                                 <th><button type="button" class="btn btn-light btn-num btn-only-num"  value="4">4</button></th>
                                 <td><button type="button" class="btn btn-light btn-num btn-only-num"  value="5">5</button></td>
                                 <td><button type="button" class="btn btn-light btn-num btn-only-num"  value="6">6</button></td>
-                                <td><button type="button" class="btn btn-light btn-num"  value="*">x</button></td>
-                                <th><button type="button" class="btn btn-light btn-num"  value="/">/</button></th>
+                                <td><button type="button" class="btn btn-light btn-num btn-operators" value="*">x</button></td>
+                                <th><button type="button" class="btn btn-light btn-num btn-operators" value="/">/</button></th>
                             </tr>
                             <tr>
-                                <th ><button type="button" class="btn btn-light btn-num btn-only-num"  value="1">1</button></th>
-                                <td><button type="button" class="btn btn-light btn-num btn-only-num"  value="2">2</button></td>
-                                <td><button type="button" class="btn btn-light btn-num btn-only-num"  value="3">3</button></td>
-                                <td><button type="button" class="btn btn-light btn-num"  value="+">+</button></td>
-                                <th ><button type="button" class="btn btn-light btn-num"  value="-">-</button></th>
+                                <th ><button type="button" class="btn btn-light btn-num btn-only-num" value="1">1</button></th>
+                                <td><button type="button" class="btn btn-light btn-num btn-only-num" value="2">2</button></td>
+                                <td><button type="button" class="btn btn-light btn-num btn-only-num" value="3">3</button></td>
+                                <td><button type="button" class="btn btn-light btn-num btn-operators" value="+">+</button></td>
+                                <th ><button type="button" class="btn btn-light btn-num btn-operators"  value="-">-</button></th>
                             </tr>
                             <tr>
-                                <th><button type="button" class="btn btn-light btn-num btn-only-num"  value="0">0</button></th>
-                                <td><button type="button" class="btn btn-light btn-num"  value=".">.</button></td>
-                                <td><button type="button" class="btn btn-light btn-num"  value="%">%</button></td>
-                                <th><button type="button" class="btn btn-light btn-num">ANS</button></th>
-                                <th><button type="button" class="btn btn-light btn-num ">=</button></th>
+                                <th><button type="button" class="btn btn-light btn-num btn-only-num" value="0">0</button></th>
+                                <td><button type="button" class="btn btn-light btn-num btn-point" value=".">.</button></td>
+                                <td><button type="button" class="btn btn-light btn-num btn-operators" value="%">%</button></td>
+                                <th><button type="button" class="btn btn-light btn-num btn-answer">ANS</button></th>
+                                <th><button type="button" class="btn btn-light btn-num btn-igual">=</button></th>
                             </tr>
                         </tbody>
                     </table>
