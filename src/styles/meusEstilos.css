@@ -1,13 +1,48 @@
-.btn-num {
-    font-size: 20px; 
-    width: 65px;
-    height: 40px;
-  }
+#input-display {
+  text-align: right;
+}
 
-.text-btn{
-    color: white;
+.btn-num {
+  font-size: 20px;
+  width: 65px;
+  height: 40px;
+}
+
+.text-btn {
+  color: white;
+}
+
+body {
+  background-color: #1c1f22 !important;
+}
+
+.botao {
+  background-color: transparent;
+  color: #fff;
+  border: #000 solid 1px;
+}
+
+.botao:hover {
+  color: #fff;
+  border: #fff solid 1px;
+}
+
+.botaoClick:hover {
+  border: #fff solid 1px;
 }
 
 #input-display {
-  text-align: right;
+  background-color: #1c1f22;
+  border: solid 1px #000;
+  color: #fff;
+}
+
+.submenu {
+  background-color: #1c1f22;
+  border: solid 2px #000;
+  color: #fff;
+}
+
+tr {
+  border: none;
 }
