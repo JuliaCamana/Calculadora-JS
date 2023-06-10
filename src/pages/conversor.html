@@ -9,28 +9,25 @@
     <title>Calculadora</title>
 </head>
 <body class="bg-light">
-
     <div class="container d-flex justify-content-center align-items-center mt-5"> 
         <div class="card border-dark bg-dark" style="width: 28rem;">
             <div class="card-body ">
             <h4 class="text-center text-light ">Conversor</h4>
-            <div  >
+            <div>
                 <input type="text" class="form-control text-center" id="tela" style="height: 30px ; width:100px ;" > </input>
                 <select name="" id="" >
                     <option value="">unidade</option>
                     <option value="km">km</option>
-                </select>
-                   
+                </select> 
             </div> 
-            <div  >
+            <div>
                 <input type="text" class="form-control text-center" id="convertido" style="height: 30px; width:100px ;" disabled> </input>
-                <select name="" id="" >
+                <select name="" id="">
                     <option value="">unidade</option>
                     <option value="m">m</option>
                 </select>
-                   
             </div> 
-        </p>
+            </p>
             <div class="dropdown">
                 <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Menu
@@ -74,25 +71,17 @@
                 <th ><button type="button" class="btn btn-danger btn-num ">calc</button></th>
               </tr>
             </tbody>
-          </table>
-    
+          </table> 
     </div>
     </div>
     </div>
-
-
     <script>
         function escreverValor(botao) { 
           var valor = botao.value; // Obter o valor do botão clicado
           var textarea = document.getElementById("tela");
           textarea.value += valor; // Adiciona o valor ao conteúdo existente na textarea
         }
-      </script>
-    
-    
-        <script src="bootstrap.bundle.min.js"></script>
-
-
-    
+    </script>
+    <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>

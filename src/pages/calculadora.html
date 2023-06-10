@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./../styles/bootstrap.min.css">
+        <link rel="stylesheet" href="./../styles/meusEstilos.css">
+        <title>Calculadora</title>
+    </head>
+    <body class="bg-light">
+        <div class="container d-flex justify-content-center align-items-center mt-5">
+            <div class="card border-dark bg-dark" style="width: 28rem;">
+                <div class="card-body ">
+                    <h4 class="text-center text-light ">Calculadora</h4>
+                    <div class="form-floating " >
+                        <textarea readonly class="form-control" placeholder="" id="input-display" style="height: 100px "></textarea>
+                    </div>
+                    </p>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Menu
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li> <a class="dropdown-item" href="#">Tema Escuro</a></li>
+                            <li> <a class="dropdown-item" href="#">Tema Claro</a></li>
+                            <li><a class="dropdown-item" href="conversor.html">Conversor</a></li>
+                            <li><a class="dropdown-item" href="equacao.html">Equacao 2 Grau</a></li>
+                        </ul>
+                    </div>
+                    </p>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Científica
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse bg-dark" data-bs-parent="#accordionFlushExample">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <th ><button type="button" class="btn btn-light btn-num" >INV </p></button></th>
+                                            <th ><button type="button" class="btn btn-light btn-num"  value="1/">1/x</button></th>
+                                            <th ><button type="button" class="btn btn-light btn-num "  value="!">x!</button></th>
+                                        </tr>
+                                        <tr>
+                                            <th ><button type="button" class="btn btn-light btn-num"  value="sin">sin</button></th>
+                                            <td><button type="button" class="btn btn-light btn-num"  value="ln">ln</button></td>
+                                            <td><button type="button" class="btn btn-light btn-num"  value="raiz">raiz</button></td>
+                                        </tr>
+                                        <tr>
+                                            <th ><button type="button" class="btn btn-light btn-num">cos</button></th>
+                                            <td><button type="button" class="btn btn-light btn-num"  value="log">log</button></td>
+                                            <td><button type="button" class="btn btn-light btn-num"  value="^">^</button></td>
+                                            <td><button type="button" class="btn btn-light btn-num"  value="(">(</button></td>
+                                        </tr>
+                                        <tr>
+                                            <th ><button type="button" class="btn btn-light btn-num"  value="tan">tan</button></th>
+                                            <td ><button type="button" class="btn btn-light btn-num"  value="pi">pi</button></td>
+                                            <td><button type="button" class="btn btn-light btn-num" value="e">e</button></td>
+                                            <td><button type="button" class="btn btn-light btn-num"  value=")">)</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th><button type="button" class="btn btn-light btn-num btn-only-num"  value="7">7</button></th>
+                                <th><button type="button" class="btn btn-light btn-num btn-only-num"  value="8">8</button></th>
+                                <th><button type="button" class="btn btn-light btn-num btn-only-num"  value="9">9</button></th>
+                                <th><button type="button" class="btn btn-danger btn-num" >DEL</button></th>
+                                <th><button type="button" class="btn btn-danger btn-num">AC</button></th>
+                            </tr>
+                            <tr>
+                                <th><button type="button" class="btn btn-light btn-num btn-only-num"  value="4">4</button></th>
+                                <td><button type="button" class="btn btn-light btn-num btn-only-num"  value="5">5</button></td>
+                                <td><button type="button" class="btn btn-light btn-num btn-only-num"  value="6">6</button></td>
+                                <td><button type="button" class="btn btn-light btn-num"  value="*">x</button></td>
+                                <th><button type="button" class="btn btn-light btn-num"  value="/">/</button></th>
+                            </tr>
+                            <tr>
+                                <th ><button type="button" class="btn btn-light btn-num btn-only-num"  value="1">1</button></th>
+                                <td><button type="button" class="btn btn-light btn-num btn-only-num"  value="2">2</button></td>
+                                <td><button type="button" class="btn btn-light btn-num btn-only-num"  value="3">3</button></td>
+                                <td><button type="button" class="btn btn-light btn-num"  value="+">+</button></td>
+                                <th ><button type="button" class="btn btn-light btn-num"  value="-">-</button></th>
+                            </tr>
+                            <tr>
+                                <th><button type="button" class="btn btn-light btn-num btn-only-num"  value="0">0</button></th>
+                                <td><button type="button" class="btn btn-light btn-num"  value=".">.</button></td>
+                                <td><button type="button" class="btn btn-light btn-num"  value="%">%</button></td>
+                                <th><button type="button" class="btn btn-light btn-num">ANS</button></th>
+                                <th><button type="button" class="btn btn-light btn-num ">=</button></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> 
+        <script src="../scripts/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../scripts/jquery/jquery-3.7.0.min.js"></script>
+        <script src="../scripts/custom/calculadora.js"></script>
+    </body>
+</html>
