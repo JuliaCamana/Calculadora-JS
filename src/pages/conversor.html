@@ -21,31 +21,23 @@
         <h4 class="text-center text-light ">Conversor EasyCalc</h4>
         <div>
           <label>Grandezas</label>
-          <select name="" id="" class="input-display form-select form-control mb-3">
-            <option value="">Comprimento</option>
-            <option value="km">Massa</option>
-            <option value="km">Temperatura</option>
-            <option value="km">Tempo</option>
-            <option value="km">Velocidade</option>
-            <option value="km">Luz</option>
+          <select name="types" id="types" class="input-display form-select form-control mb-3">
+            <option value=""></option>
+            <option value="massa">Massa</option>
+            <option value="temperatura">Temperatura</option>
+            <option value="tempo">Tempo</option> 
           </select>
           <label>Unidade</label>
-          <select name="" id="" class="input-display form-select form-control mb-3">
-            <option value="">Metros</option>
-            <option value="km">Kilométros</option>
+          <select name="" id="unit-in" class="input-display form-select form-control mb-3"> 
           </select>
           <label>Valor de entrada</label>
-          <input type="number" class="input-display form-control mb-3" id="tela"> </input>
-
+          <input type="number" class="input-display form-control mb-3" id="input-text"/>
         </div>
         <div>
           <label>Unidade</label>
-          <select name="" id="" class="input-display form-select form-control mb-3">
-            <option value="">Milimétros</option>
-            <option value="m">Centimétros</option>
-          </select>
+          <select name="" id="unit-out" class="input-display form-select form-control mb-3"></select>
           <label>Valor de saída</label>
-          <input type="number" readonly class="input-display form-control mb-3" id="convertido" />
+          <input type="number" readonly class="input-display form-control mb-3" id="output-text" />
 
         </div>
         </p>
@@ -58,10 +50,9 @@
             <li><a class="dropdown-item" href="calculadora.html">Científica</a></li> 
             <li> <a class="dropdown-item" onclick="light()">Tema Escuro</a></li>
             <li> <a class="dropdown-item" onclick="dark()">Tema Claro</a></li>
-            <li><a class="dropdown-item" href="equacao.html">Equação do 2º grau</a></li>
-            <li><a class="dropdown-item" href="#">Inserir pelo teclado</a></li>
+            <li><a class="dropdown-item" href="equacao.html">Equação do 2º grau</a></li> 
             <li><a class="dropdown-item" href="historico-de-calculos.html">Histórico de Cálculo</a></li>
-            <li><a class="dropdown-item" href="#">Exportar Resultados</a></li>
+            <li><a class="dropdown-item" id="btn-share">Exportar Resultados</a></li>
           </ul>
         </div>
         </p>
@@ -75,8 +66,8 @@
               </th>
               <th><button type="button" class="botao btn btn-num "  value="9">9</button>
               </th>
-              <th><button type="button" class="botaoClick btn btn-danger btn-num">DEL</button></th>
-              <th><button type="button" class="botaoClick btn btn-danger btn-num">AC</button></th>
+              <th><button type="button" class="botaoClick btn btn-danger btn-num" value="del">DEL</button></th>
+              <th><button type="button" class="botaoClick btn btn-danger btn-num" value="ac">AC</button></th>
             </tr>
             <tr>
               <th><button type="button" class="botao btn btn-num"  value="4">4</button>
@@ -85,9 +76,9 @@
               </td>
               <td><button type="button" class="botao btn btn-num"  value="6">6</button>
               </td>
-              <td><button type="button" class="botao btn btn-num"  value="*">x</button>
+              <td><button type="button" class="botao btn btn-num disabled"  value="*" disabled>x</button>
               </td>
-              <th><button type="button" class="botao btn btn-num"  value="/">/</button>
+              <th><button type="button" class="botao btn btn-num disabled"  value="/" disabled>/</button>
               </th>
             </tr>
             <tr>
@@ -97,34 +88,29 @@
               </td>
               <td><button type="button" class="botao btn btn-num"  value="3">3</button>
               </td>
-              <td><button type="button" class="botao btn btn-num"  value="+">+</button>
+              <td><button type="button" class="botao btn btn-num disabled" disabled value="+">+</button>
               </td>
-              <th><button type="button" class="botao btn btn-num"  value="-">-</button>
+              <th><button type="button" class="botao btn btn-num disabled" disabled value="-">-</button>
               </th>
             </tr>
             <tr>
               <th><button type="button" class="botao btn btn-num"  value="0">0</button>
               </th>
-              <td><button type="button" class="botao btn btn-num"  value=".">.</button>
+              <td><button type="button" class="botao btn btn-num disabled" disabled value=".">.</button>
               </td>
-              <td><button type="button" class="botao btn btn-num"  value="%">%</button>
+              <td><button type="button" class="botao btn btn-num disabled" disabled value="%">%</button>
               </td>
-              <th><button type="button" class="botao btn btn-num">Raiz</button></th>
-              <th><button type="button" class="botaoClick btn btn-danger btn-num ">calc</button></th>
+              <th><button type="button" class="botao btn btn-num disabled" disabled>Raiz</button></th>
+              <th><button type="button" class="botaoClick btn btn-danger btn-num " value="calc">calc</button></th>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-  </div>
-  <script>
-    function escreverValor(botao) {
-      var valor = botao.value; // Obter o valor do botão clicado
-      var textarea = document.getElementById("tela");
-      textarea.value += valor; // Adiciona o valor ao conteúdo existente na textarea
-    }
-  </script>
+  </div>  
   <script src="../scripts/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../scripts/jquery/jquery-3.7.0.min.js"></script>
+  <script src="../scripts/custom/conversor.js"></script>
 </body>
 
 </html>
