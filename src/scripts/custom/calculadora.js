@@ -210,4 +210,16 @@ $(document).ready(() => {
       alert("Expressão Inválida!");
     }
   });
+
+  $("#btn-export").click(() => {
+    if (navigator.share) {
+      navigator.share({
+        title: "Resultado de uma operação!",
+        text: `
+          Expressão: ${lastCalc.expression}\n
+          Resultado: ${lastCalc.result}
+        `,
+      });
+    }
+  });
 });
