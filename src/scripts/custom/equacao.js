@@ -43,11 +43,11 @@ $(document).ready(() => {
   };
 
   $("body").delegate(".btn-ac", "click", () => {
-    inputA.val();
-    inputB.val();
-    inputC.val();
-    inputX1.val();
-    inputX2.val();
+    inputA.val("");
+    inputB.val("");
+    inputC.val("");
+    inputX1.val("");
+    inputX2.val("");
   });
 
   $("#btn-shar").click(() => {
@@ -93,5 +93,28 @@ $(document).ready(() => {
     if (value == "calc") {
       handleCalc();
     }
+  });
+
+  $(".btn-point").click(() => {
+    if (!VET_NUMBERS.includes(getInputLastChar())) return;
+
+    let addComa = null;
+
+    for (let i = selectedInput.val().length; i >= 0; i--) {
+      const char = selectedInput.val()[i];
+
+      if (VET_OPERATORS.includes(char)) {
+        addComa = true;
+        break;
+      }
+
+      if (char == ".") {
+        addComa = false;
+        break;
+      }
+    }
+
+    if (addComa == null || addComa == true)
+      selectedInput.val(selectedInput.val() + ".");
   });
 });

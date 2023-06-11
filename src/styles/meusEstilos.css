@@ -65,3 +65,7 @@ label {
 .form-control {
   color: white !important;
 }
+
+.disabled {
+  color: #656565 !important;
+}
