@@ -1,5 +1,5 @@
 #input-display {
-  text-align: right;    
+  text-align: right;
   font-size: 20px;
 }
 
@@ -38,6 +38,12 @@ body {
   color: #fff;
 }
 
+.input-display {
+  background-color: #1c1f22;
+  border: solid 1px #000;
+  color: #fff;
+}
+
 .submenu {
   background-color: #1c1f22;
   border: solid 2px #000;
@@ -46,4 +52,8 @@ body {
 
 tr {
   border: none;
+}
+
+label {
+  color: #fff;
 }

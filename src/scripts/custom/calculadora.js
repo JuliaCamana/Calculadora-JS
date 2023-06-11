@@ -47,6 +47,14 @@ $(document).ready(() => {
     }
   });
 
+  $(".btn-log").click(() => {
+    try {
+      displayInput.val(Math.log10(eval(displayInput.val())));
+    } catch {
+      alert("Expressão Inválida!");
+    }
+  });
+
   $(".btn-tan").click(() => {
     try {
       displayInput.val(Math.tan(eval(displayInput.val())));

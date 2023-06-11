@@ -1,87 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="meusEstilos.css">
-    <title>Calculadora</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/meusEstilos.css">
+  <title>Calculadora</title>
 </head>
-<body class="bg-light">
-    <div class="container d-flex justify-content-center align-items-center mt-5"> 
-        <div class="card border-dark bg-dark" style="width: 28rem;">
-            <div class="card-body ">
-            <h4 class="text-center text-light ">Conversor</h4>
-            <div>
-                <input type="text" class="form-control text-center" id="tela" style="height: 30px ; width:100px ;" > </input>
-                <select name="" id="" >
-                    <option value="">unidade</option>
-                    <option value="km">km</option>
-                </select> 
-            </div> 
-            <div>
-                <input type="text" class="form-control text-center" id="convertido" style="height: 30px; width:100px ;" disabled> </input>
-                <select name="" id="">
-                    <option value="">unidade</option>
-                    <option value="m">m</option>
-                </select>
-            </div> 
-            </p>
-            <div class="dropdown">
-                <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Menu
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="calculadora.html">Cientifica</a></li>
-                  <li> <a class="dropdown-item" href="#">Tema Escuro</a></li>
-                  <li> <a class="dropdown-item" href="#">Tema Claro</a></li>
-                  <li><a class="dropdown-item" href="equacao.html">Equacao</a></li>
-                </ul>
-            </div>
-            </p>
-          <table class="table ">
-            <tbody>
-              <tr>
-                <th ><button type="button" class="btn btn-light btn-num" onclick="escreverValor(this)" value="7">7</button></th>
-                <th ><button type="button" class="btn btn-light btn-num" onclick="escreverValor(this)" value="8">8</button></th>
-                <th ><button type="button" class="btn btn-light btn-num " onclick="escreverValor(this)" value="9">9</button></th>
-                <th ><button type="button" class="btn btn-danger btn-num" >DEL</button></th>
-                <th ><button type="button" class="btn btn-danger btn-num">AC</button></th>
-              </tr>
-              <tr>
-                <th ><button type="button" class="btn btn-light btn-num" onclick="escreverValor(this)" value="4">4</button></th>
-                <td><button type="button" class="btn btn-light btn-num" onclick="escreverValor(this)" value="5">5</button></td>
-                <td><button type="button" class="btn btn-light btn-num" onclick="escreverValor(this)" value="6">6</button></td>
-                <td><button type="button" class="btn btn-light btn-num" onclick="escreverValor(this)" value="*">x</button></td>
-                <th><button type="button" class="btn btn-light btn-num" onclick="escreverValor(this)" value="/">/</button></th>
-              </tr>
-              <tr>
-                <th ><button type="button" class="btn btn-light btn-num" onclick="escreverValor(this)" value="1">1</button></th>
-                <td><button type="button" class="btn btn-light btn-num" onclick="escreverValor(this)" value="2">2</button></td>
-                <td><button type="button" class="btn btn-light btn-num" onclick="escreverValor(this)" value="3">3</button></td>
-                <td><button type="button" class="btn btn-light btn-num" onclick="escreverValor(this)" value="+">+</button></td>
-                <th ><button type="button" class="btn btn-light btn-num" onclick="escreverValor(this)" value="-">-</button></th>
-              </tr>
-              <tr>
-                <th ><button type="button" class="btn btn-light btn-num" onclick="escreverValor(this)" value="0">0</button></th>
-                <td ><button type="button" class="btn btn-light btn-num" onclick="escreverValor(this)" value=".">.</button></td>
-                <td><button type="button" class="btn btn-light btn-num" onclick="escreverValor(this)" value="%">%</button></td>
-                <th ><button type="button" class="btn btn-light btn-num">Raiz</button></th>
-                <th ><button type="button" class="btn btn-danger btn-num ">calc</button></th>
-              </tr>
-            </tbody>
-          </table> 
+
+<body>
+  <div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="card border-dark bg-dark" style="width: 28rem;">
+      <div class="card-body ">
+        <h4 class="text-center text-light ">Conversor</h4>
+        <div>
+          <label>Grandezas</label>
+          <select name="" id="" class="input-display form-select form-control mb-3">
+            <option value="">Distancia</option>
+            <option value="km">Massa</option>
+            <option value="km">Temperatura</option>
+            <option value="km">Velocidade</option>
+            <option value="km">Luz</option>
+          </select>
+          <label>Unidade</label>
+          <select name="" id="" class="input-display form-select form-control mb-3">
+            <option value="">Metros</option>
+            <option value="km">Kilométros</option>
+          </select>
+          <label>Valor de entrada</label>
+          <input type="text" class="input-display form-control mb-3" id="tela"> </input>
+
+        </div>
+        <div>
+          <label>Unidade</label>
+          <select name="" id="" class="input-display form-select form-control mb-3">
+            <option value="">Milimétros</option>
+            <option value="m">Centimétros</option>
+          </select>
+          <label>Valor de saída</label>
+          <input type="text" class="input-display form-control mb-3" id="convertido" />
+
+        </div>
+        </p>
+        <div class="dropdown">
+          <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Menu
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="calculadora.html">Científica</a></li>
+            <li> <a class="dropdown-item" href="#">Tema Escuro</a></li>
+            <li> <a class="dropdown-item" href="#">Tema Claro</a></li>
+            <li><a class="dropdown-item" href="equacao.html">Equação do 2º grau</a></li>
+          </ul>
+        </div>
+        </p>
+        <table class="table ">
+          <tbody>
+            <tr>
+              <th><button type="button" class="botao bt btn-light btn-num" onclick="escreverValor(this)"
+                  value="7">7</button>
+              </th>
+              <th><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="8">8</button>
+              </th>
+              <th><button type="button" class="botao btn btn-num " onclick="escreverValor(this)" value="9">9</button>
+              </th>
+              <th><button type="button" class="botaoClick btn btn-danger btn-num">DEL</button></th>
+              <th><button type="button" class="botaoClick btn btn-danger btn-num">AC</button></th>
+            </tr>
+            <tr>
+              <th><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="4">4</button>
+              </th>
+              <td><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="5">5</button>
+              </td>
+              <td><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="6">6</button>
+              </td>
+              <td><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="*">x</button>
+              </td>
+              <th><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="/">/</button>
+              </th>
+            </tr>
+            <tr>
+              <th><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="1">1</button>
+              </th>
+              <td><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="2">2</button>
+              </td>
+              <td><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="3">3</button>
+              </td>
+              <td><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="+">+</button>
+              </td>
+              <th><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="-">-</button>
+              </th>
+            </tr>
+            <tr>
+              <th><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="0">0</button>
+              </th>
+              <td><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value=".">.</button>
+              </td>
+              <td><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="%">%</button>
+              </td>
+              <th><button type="button" class="botao btn btn-num">Raiz</button></th>
+              <th><button type="button" class="botaoClick btn btn-danger btn-num ">calc</button></th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    </div>
-    </div>
-    <script>
-        function escreverValor(botao) { 
-          var valor = botao.value; // Obter o valor do botão clicado
-          var textarea = document.getElementById("tela");
-          textarea.value += valor; // Adiciona o valor ao conteúdo existente na textarea
-        }
-    </script>
-    <script src="bootstrap.bundle.min.js"></script>
+  </div>
+  <script>
+    function escreverValor(botao) {
+      var valor = botao.value; // Obter o valor do botão clicado
+      var textarea = document.getElementById("tela");
+      textarea.value += valor; // Adiciona o valor ao conteúdo existente na textarea
+    }
+  </script>
+  <script src="../scripts/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
