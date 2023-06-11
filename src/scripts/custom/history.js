@@ -1,4 +1,4 @@
-const history = {
+const historyCalc = {
   add(txt) {
     const data = JSON.parse(localStorage.getItem("history") || "[]");
     data.push(txt);

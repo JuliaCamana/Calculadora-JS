@@ -85,6 +85,16 @@ $(document).ready(() => {
         outputText.val(inputText.val());
       }
     }
+
+    if (outputText.val()) {
+      historyCalc.add(`
+        Tipo de Conversão: ${selectedInputType.val()}<br>
+        Unidade de Entrada: ${selectInput1.val()}<br>
+        Valor: ${inputText.val()}<br>
+        Unidade de Saída: ${selectInput2.val()}<br>
+        Saída: ${outputText.val()}<br>
+      `);
+    }
   };
 
   const handleClean = () => {

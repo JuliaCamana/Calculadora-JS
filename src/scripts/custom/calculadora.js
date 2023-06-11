@@ -4,6 +4,10 @@ const VET_PARENTS = "()";
 
 $(document).ready(() => {
   const displayInput = $("#input-display");
+  let lastCalc = {
+    expression: "",
+    result: "",
+  };
 
   let answer = "";
 
@@ -19,9 +23,17 @@ $(document).ready(() => {
     try {
       let expression = displayInput.val();
 
+      lastCalc.expression = expression;
+
       expression = expression.split("^").join("**");
 
-      displayInput.val(eval(expression));
+      const result = eval(expression);
+
+      lastCalc.result = result;
+
+      displayInput.val(result);
+
+      historyCalc.add(`${expression}=${result}`);
     } catch (error) {
       alert("Expressão Inválida!");
     }

@@ -1,85 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../styles/bootstrap.min.css">
-    <link rel="stylesheet" href="./../styles/meusEstilos.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="./../styles/meusEstilos.css" />
     <title>Calculadora</title>
-    <link href="../images/ico-calculator.ico" rel="icon">
-</head>
+    <link href="../images/ico-calculator.ico" rel="icon" />
+    <script src="../scripts/custom/history.js"></script>
+    <script src="../scripts/custom/theme.js"></script>
+  </head>
 
-<body>
-    <div class="container d-flex justify-content-center align-items-center mt-5">
-        <div class="card border-dark bg-dark" style="width: 27rem;">
-            <div class="card-body ">
-                <h4 class="text-center text-light">Histórico de Cálculo</h4>
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center mt-5"
+    >
+      <div class="card border-dark bg-dark" style="width: 27rem">
+        <div class="card-body">
+          <h4 class="text-center text-light">Histórico de Cálculo</h4>
 
-                <div class="dropdown">
-                    <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Menu
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li> <a class="dropdown-item" href="#">Tema Escuro</a></li>
-                        <li> <a class="dropdown-item" href="#">Tema Claro</a></li>
-                        <li><a class="dropdown-item" href="conversor.html">Conversor</a></li>
-                        <li><a class="dropdown-item" href="equacao.html">Equação do 2º grau</a></li>
-                        <li><a class="dropdown-item" href="#">Inserir pelo teclado</a></li>
-                        <li><a class="dropdown-item" href="#">Exportar Resultados</a></li>
+          <div class="dropdown">
+            <button
+              class="btn btn-outline-light dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Menu
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" onclick="light()">Tema Escuro</a>
+              </li>
+              <li><a class="dropdown-item" onclick="dark()">Tema Claro</a></li>
+              <li>
+                <a class="dropdown-item" href="conversor.html">Conversor</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="equacao.html"
+                  >Equação do 2º grau</a
+                >
+              </li>
+            </ul>
+          </div>
 
-                    </ul>
-                </div>
-
-
-                <table class="table text-light">
-                    <thead>
+          <table class="table text-light">
+            <thead>
+              <tr>
+                <th>
+                  Últimos
+                  <script>
+                    document.write(historyCalc.get().length);
+                  </script>
+                  cálculos
+                </th>
+              </tr>
+            </thead>
+            <tbody class="text-light">
+              <script>
+                document.write(
+                  historyCalc
+                    .get()
+                    .map(
+                      (text) => `
                         <tr>
-                            <th>últimos 10 cálculos</th>
+                            <td>${text}</td>
                         </tr>
-
-                    </thead>
-                    <tbody class="text-light">
-                        <tr>
-                            <td>Result1</td>
-                        </tr>
-                        <tr>
-                            <td>Result2</td>
-                        </tr>
-                        <tr>
-                            <td>Result3</td>
-                        </tr>
-                        <tr>
-                            <td>Result4</td>
-                        </tr>
-                        <tr>
-                            <td>Result5</td>
-                        </tr>
-                        <tr>
-                            <td>Result6</td>
-                        </tr>
-                        <tr>
-                            <td>Result7</td>
-                        </tr>
-                        <tr>
-                            <td>Result8</td>
-                        </tr>
-                        <tr>
-                            <td>Result9</td>
-                        </tr>
-                        <tr>
-                            <td>Result10</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                    `
+                    )
+                    .join("")
+                );
+              </script>
+            </tbody>
+          </table>
         </div>
+      </div>
     </div>
     <script src="../scripts/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../scripts/jquery/jquery-3.7.0.min.js"></script>
-    <script src="../scripts/custom/calculadora.js"></script>
-</body>
-
+  </body>
 </html>

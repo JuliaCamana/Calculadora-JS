@@ -37,6 +37,14 @@ $(document).ready(() => {
 
       inputX1.val(x1);
       inputX2.val(x2);
+
+      if (inputX1.val()) {
+        historyCalc.add(`
+          ${a}x^2 + ${b}x + ${c} = 0<br>
+          x1 = ${x1}<br>
+          x2 = ${x2}<br>
+        `);
+      }
     } catch {
       alert("Expressão Inválida!");
     }
