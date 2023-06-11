@@ -57,3 +57,11 @@ tr {
 label {
   color: #fff;
 }
+
+.form-control:focus {
+  background-color: #1c1f22 !important;
+}
+
+.form-control {
+  color: white !important;
+}
