@@ -13,8 +13,38 @@
   color: white;
 }
 
+body[dark] .submenu {
+  border-color: white;
+}
+body[dark] .input-display {
+  background-color: unset !important;
+}
+
+body[dark] .disabled {
+  color: #d5d5d5 !important;
+}
+
+body[dark] .submenu,
+body[dark] {
+  background-color: white;
+}
+
+body[dark] * {
+  color: black !important;
+}
+
+body[dark] .form-control:focus {
+  background-color: #f1f3f4 !important;
+}
+
+body[dark] textarea,
+body[dark] table,
+body[dark] .card-body {
+  background-color: #f1f3f4 !important;
+}
+
 body {
-  background-color: #1c1f22 !important;
+  background-color: #1c1f22;
 }
 
 .botao {

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./../styles/meusEstilos.css">
     <title>Calculadora</title>
     <link href="../images/ico-calculator.ico" rel="icon">
+    <script src="../scripts/custom/theme.js"></script>
+    <script src="../scripts/custom/history.js"></script>
 </head>
 
 <body>
@@ -17,7 +19,7 @@
             <div class="card-body ">
                 <h4 class="text-center text-light">EasyCalc</h4>
                 <div class="form-floating ">
-                    <textarea readonly class="form-control" placeholder="" id="input-display"
+                    <textarea class="form-control" placeholder="" id="input-display"
                         style="height: 100px "></textarea>
                 </div>
                 </p>
@@ -27,8 +29,8 @@
                         Menu
                     </button>
                     <ul class="dropdown-menu">
-                        <li> <a class="dropdown-item" href="#">Tema Escuro</a></li>
-                        <li> <a class="dropdown-item" href="#">Tema Claro</a></li>
+                        <li> <a class="dropdown-item" onclick="light()">Tema Escuro</a></li>
+                        <li> <a class="dropdown-item" onclick="dark()">Tema Claro</a></li>
                         <li><a class="dropdown-item" href="conversor.html">Conversor</a></li>
                         <li><a class="dropdown-item" href="equacao.html">Equação do 2º grau</a></li>
                         <li><a class="dropdown-item" href="#">Inserir pelo teclado</a></li>

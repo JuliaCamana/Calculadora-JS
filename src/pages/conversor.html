@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="../styles/meusEstilos.css">
   <link href="../images/ico-calculator.ico" rel="icon">
   <title>Calculadora</title>
+  <script src="../scripts/custom/theme.js"></script>
+  <script src="../scripts/custom/history.js"></script>
 </head>
 
 <body>
@@ -53,9 +55,9 @@
             Menu
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="calculadora.html">Científica</a></li>
-            <li> <a class="dropdown-item" href="#">Tema Escuro</a></li>
-            <li> <a class="dropdown-item" href="#">Tema Claro</a></li>
+            <li><a class="dropdown-item" href="calculadora.html">Científica</a></li> 
+            <li> <a class="dropdown-item" onclick="light()">Tema Escuro</a></li>
+            <li> <a class="dropdown-item" onclick="dark()">Tema Claro</a></li>
             <li><a class="dropdown-item" href="equacao.html">Equação do 2º grau</a></li>
             <li><a class="dropdown-item" href="#">Inserir pelo teclado</a></li>
             <li><a class="dropdown-item" href="#">Histórico de Cálculo</a></li>
@@ -66,46 +68,46 @@
         <table class="table ">
           <tbody>
             <tr>
-              <th><button type="button" class="botao bt btn-light btn-num" onclick="escreverValor(this)"
+              <th><button type="button" class="botao btn btn-num" 
                   value="7">7</button>
               </th>
-              <th><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="8">8</button>
+              <th><button type="button" class="botao btn btn-num"  value="8">8</button>
               </th>
-              <th><button type="button" class="botao btn btn-num " onclick="escreverValor(this)" value="9">9</button>
+              <th><button type="button" class="botao btn btn-num "  value="9">9</button>
               </th>
               <th><button type="button" class="botaoClick btn btn-danger btn-num">DEL</button></th>
               <th><button type="button" class="botaoClick btn btn-danger btn-num">AC</button></th>
             </tr>
             <tr>
-              <th><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="4">4</button>
+              <th><button type="button" class="botao btn btn-num"  value="4">4</button>
               </th>
-              <td><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="5">5</button>
+              <td><button type="button" class="botao btn btn-num"  value="5">5</button>
               </td>
-              <td><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="6">6</button>
+              <td><button type="button" class="botao btn btn-num"  value="6">6</button>
               </td>
-              <td><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="*">x</button>
+              <td><button type="button" class="botao btn btn-num"  value="*">x</button>
               </td>
-              <th><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="/">/</button>
-              </th>
-            </tr>
-            <tr>
-              <th><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="1">1</button>
-              </th>
-              <td><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="2">2</button>
-              </td>
-              <td><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="3">3</button>
-              </td>
-              <td><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="+">+</button>
-              </td>
-              <th><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="-">-</button>
+              <th><button type="button" class="botao btn btn-num"  value="/">/</button>
               </th>
             </tr>
             <tr>
-              <th><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="0">0</button>
+              <th><button type="button" class="botao btn btn-num"  value="1">1</button>
               </th>
-              <td><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value=".">.</button>
+              <td><button type="button" class="botao btn btn-num"  value="2">2</button>
               </td>
-              <td><button type="button" class="botao btn btn-num" onclick="escreverValor(this)" value="%">%</button>
+              <td><button type="button" class="botao btn btn-num"  value="3">3</button>
+              </td>
+              <td><button type="button" class="botao btn btn-num"  value="+">+</button>
+              </td>
+              <th><button type="button" class="botao btn btn-num"  value="-">-</button>
+              </th>
+            </tr>
+            <tr>
+              <th><button type="button" class="botao btn btn-num"  value="0">0</button>
+              </th>
+              <td><button type="button" class="botao btn btn-num"  value=".">.</button>
+              </td>
+              <td><button type="button" class="botao btn btn-num"  value="%">%</button>
               </td>
               <th><button type="button" class="botao btn btn-num">Raiz</button></th>
               <th><button type="button" class="botaoClick btn btn-danger btn-num ">calc</button></th>

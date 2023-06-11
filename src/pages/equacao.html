@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="../styles/meusEstilos.css">
         <link href="../images/ico-calculator.ico" rel="icon">
         <title>Calculadora</title>
+        <script src="../scripts/custom/theme.js"></script>
+        <script src="../scripts/custom/history.js"></script>
     </head>
     <body>
         <div class="container d-flex justify-content-center align-items-center mt-5">
@@ -33,8 +35,8 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="calculadora.html">Científica</a></li>
-                            <li> <a class="dropdown-item" href="#">Tema Escuro</a></li>
-                            <li> <a class="dropdown-item" href="#">Tema Claro</a></li>
+                            <li> <a class="dropdown-item" onclick="light()">Tema Escuro</a></li>
+                            <li> <a class="dropdown-item" onclick="dark()">Tema Claro</a></li>
                             <li><a class="dropdown-item" href="conversor.html">Conversor</a></li> 
                             <li><a class="dropdown-item" href="#">Histórico de Cálculo</a></li>
                             <li><a class="dropdown-item" id="btn-shar">Exportar Resultados</a></li>
