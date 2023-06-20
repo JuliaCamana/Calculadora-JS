@@ -24,9 +24,9 @@ $(document).ready(() => {
 
       const delta = b * b - 4 * a * c;
 
-      if (!delta) return alert("Preencha todos os dados correctamente!");
+      if (isNaN(delta)) return alert("Preencha todos os dados correctamente!");
 
-      if (delta <= 0) {
+      if (delta < 0) {
         return alert("Delta é < 0 logo não existe X1 e X2");
       }
 

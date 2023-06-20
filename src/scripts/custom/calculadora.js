@@ -91,6 +91,22 @@ $(document).ready(() => {
     }
   });
 
+  $(".btn-csc").click(() => {
+    try {
+      displayInput.val(1 / Math.sin(eval(displayInput.val())));
+    } catch {
+      alert("Expressão Inválida!");
+    }
+  });
+
+  $(".btn-sec").click(() => {
+    try {
+      displayInput.val(1 / Math.cos(eval(displayInput.val())));
+    } catch {
+      alert("Expressão Inválida!");
+    }
+  });
+
   $(".btn-double").click(() => {
     try {
       const x = eval(displayInput.val());
@@ -129,11 +145,11 @@ $(document).ready(() => {
   });
 
   $(".btn-euler").click(() => {
-    displayInput.val(Math.E);
+    displayInput.val(displayInput.val() + Math.E);
   });
 
   $(".btn-pi").click(() => {
-    displayInput.val(Math.PI);
+    displayInput.val(displayInput.val() + Math.PI);
   });
 
   $(".btn-close-parent").click(() => {
