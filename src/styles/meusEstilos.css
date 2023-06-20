@@ -1,5 +1,5 @@
 #input-display {
-  text-align: right;    
+  text-align: right;
   font-size: 20px;
 }
 
@@ -13,8 +13,38 @@
   color: white;
 }
 
+body[dark] .submenu {
+  border-color: white;
+}
+body[dark] .input-display {
+  background-color: unset !important;
+}
+
+body[dark] .disabled {
+  color: #d5d5d5 !important;
+}
+
+body[dark] .submenu,
+body[dark] {
+  background-color: white;
+}
+
+body[dark] * {
+  color: black !important;
+}
+
+body[dark] .form-control:focus {
+  background-color: #f1f3f4 !important;
+}
+
+body[dark] textarea,
+body[dark] table,
+body[dark] .card-body {
+  background-color: #f1f3f4 !important;
+}
+
 body {
-  background-color: #1c1f22 !important;
+  background-color: #1c1f22;
 }
 
 .botao {
@@ -38,6 +68,12 @@ body {
   color: #fff;
 }
 
+.input-display {
+  background-color: #1c1f22;
+  border: solid 1px #000;
+  color: #fff;
+}
+
 .submenu {
   background-color: #1c1f22;
   border: solid 2px #000;
@@ -46,4 +82,20 @@ body {
 
 tr {
   border: none;
+}
+
+label {
+  color: #fff;
+}
+
+.form-control:focus {
+  background-color: #1c1f22 !important;
+}
+
+.form-control {
+  color: white !important;
+}
+
+.disabled {
+  color: #656565 !important;
 }

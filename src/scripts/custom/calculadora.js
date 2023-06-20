@@ -4,6 +4,10 @@ const VET_PARENTS = "()";
 
 $(document).ready(() => {
   const displayInput = $("#input-display");
+  let lastCalc = {
+    expression: "",
+    result: "",
+  };
 
   let answer = "";
 
@@ -19,9 +23,17 @@ $(document).ready(() => {
     try {
       let expression = displayInput.val();
 
+      lastCalc.expression = expression;
+
       expression = expression.split("^").join("**");
 
-      displayInput.val(eval(expression));
+      const result = eval(expression);
+
+      lastCalc.result = result;
+
+      displayInput.val(result);
+
+      historyCalc.add(`${expression}=${result}`);
     } catch (error) {
       alert("Expressão Inválida!");
     }
@@ -47,6 +59,14 @@ $(document).ready(() => {
     }
   });
 
+  $(".btn-log").click(() => {
+    try {
+      displayInput.val(Math.log10(eval(displayInput.val())));
+    } catch {
+      alert("Expressão Inválida!");
+    }
+  });
+
   $(".btn-tan").click(() => {
     try {
       displayInput.val(Math.tan(eval(displayInput.val())));
@@ -66,6 +86,22 @@ $(document).ready(() => {
   $(".btn-sin").click(() => {
     try {
       displayInput.val(Math.sin(eval(displayInput.val())));
+    } catch {
+      alert("Expressão Inválida!");
+    }
+  });
+
+  $(".btn-csc").click(() => {
+    try {
+      displayInput.val(1 / Math.sin(eval(displayInput.val())));
+    } catch {
+      alert("Expressão Inválida!");
+    }
+  });
+
+  $(".btn-sec").click(() => {
+    try {
+      displayInput.val(1 / Math.cos(eval(displayInput.val())));
     } catch {
       alert("Expressão Inválida!");
     }
@@ -109,11 +145,11 @@ $(document).ready(() => {
   });
 
   $(".btn-euler").click(() => {
-    displayInput.val(Math.E);
+    displayInput.val(displayInput.val() + Math.E);
   });
 
   $(".btn-pi").click(() => {
-    displayInput.val(Math.PI);
+    displayInput.val(displayInput.val() + Math.PI);
   });
 
   $(".btn-close-parent").click(() => {
@@ -188,6 +224,18 @@ $(document).ready(() => {
       }
     } catch {
       alert("Expressão Inválida!");
+    }
+  });
+
+  $("#btn-export").click(() => {
+    if (navigator.share) {
+      navigator.share({
+        title: "Resultado de uma operação!",
+        text: `
+          Expressão: ${lastCalc.expression}\n
+          Resultado: ${lastCalc.result}
+        `,
+      });
     }
   });
 });
