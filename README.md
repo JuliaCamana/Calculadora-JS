@@ -30,7 +30,6 @@ porque tenho maior dominio nela e desenvolvi a calculadora
 # Relatório
 <object data="https://github.com/JuliaCamana/Calculadora-JS/blob/main/docs/relatorio-calculadora.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="https://github.com/JuliaCamana/Calculadora-JS/blob/main/docs/relatorio-calculadora.pdf">
-        <iframe src="https://github.com/JuliaCamana/Calculadora-JS/blob/main/docs/relatorio-calculadora.pdf" title="W3Schools Free Online Web Tutorials"></iframe>
         <p><a href="https://github.com/JuliaCamana/Calculadora-JS/blob/main/docs/relatorio-calculadora.pdf">Abrir Relatório</a>.</p>
     </embed>
 </object>
