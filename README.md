@@ -25,7 +25,7 @@ porque tenho maior dominio nela e desenvolvi a calculadora
 - VScode 
 
 # O Projeto
-<img alt="img.png" src="https://github.com/josedomingos919/calculadora-cientifica/blob/main/docs/img2.png?raw=true" data-hpc="true" class="Box-sc-g0xbh4-0 kzRgrI">
+<img alt="img2.png" src="https://github.com/JuliaCamana/Calculadora-JS/blob/main/docs/img2.png?raw=true" data-hpc="true" class="Box-sc-g0xbh4-0 kzRgrI">
 
 # Relatório
 <object data="https://github.com/JuliaCamana/Calculadora-JS/blob/main/docs/relatorio-calculadora.pdf" type="application/pdf" width="700px" height="700px">
